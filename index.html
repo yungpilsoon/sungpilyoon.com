@@ -3,33 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sungpil Yoon</title>
+    <Title>sungpil yoon &#128752;</title>
     <style>
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
         }
 
         body {
             font-family: "Times New Roman", serif;
             background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Sidebar Navigation */
+        /* Sidebar Navigation - Above Main Content */
         .sidenav {
-            width: 20%;
+            width: 150px;
             position: fixed;
-            top: 5px;
-            left: 15px;
+            top: 45px; /* Adjusted main content */
+            left: 3%;
             background: #ffffff;
-            padding: 20px 10px;
+            padding: 5px;
+            text-align: left;
         }
 
         .sidenav a {
             display: block;
             padding: 10px;
-            font-size: 12px;
+            font-size: 13px;
             color: #000;
             text-decoration: none;
             transition: color 0.2s ease-in-out;
@@ -39,12 +43,20 @@
             color: #340df8;
         }
 
-        /* Main Content */
+        /* Main Content - Always Centered */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 100px; /* Ensures spacing below the sidebar */
+        }
+
         .main {
-            margin-left: 22%;
-            width: 75%;
+            max-width: 750px; /* Adjust width of content */
+            width: 90%;
             padding: 20px;
-            font-size: 14px;
+            text-align: center;
         }
 
         /* Image Optimization */
@@ -52,22 +64,27 @@
             max-width: 100%;
             height: auto;
             display: block;
-            margin-bottom: 15px;
+            margin: 0 auto 20px;
         }
 
         /* Responsive Design */
         @media screen and (max-width: 800px) {
-            .main {
-                width: 75%;
-                margin-left: 0;
-                padding: 10px;
-            }
-        }
-
-        @media screen and (max-width: 550px) {
-            .sidenav, .main {
-                width: 100%;
+            .sidenav {
                 position: relative;
+                width: 100%;
+                left: 0;
+                text-align: center;
+                padding: 15px 0;
+                top: 0; /* Moves sidebar to the top on smaller screens */
+            }
+
+            .main-container {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            .main {
+                width: 95%;
             }
         }
     </style>
@@ -76,26 +93,33 @@
 
     <!-- Sidebar Navigation -->
     <div class="sidenav">
-        <a href="index.html">SUNGPIL YOON</a>
+        <a href="index.html"><font size="3">SUNGPIL YOON</font</a>
+        <br>
+        <br>
         <a href=""><i>Images (ongoing)</i></a>
         <a href="">Projects</a>
         <a href=""><u>About</u></a>
-        <a href="mailto:contact@sungpilyoon.com">Contact</a>
+        <a href="mailto:hello@sungpilyoon.com">Contact</a>
+        <br>
+        <br>
+        <br>
         <a href="https://www.instagram.com/environmentsampler/"><u>@</u></a>
     </div>
 
-    <!-- Main Content -->
-    <div class="main">
-        <h1></h1>
-        <h2></h2>
-        <h4></h4>
+    <!-- Main Content - Always Centered -->
+    <div class="main-container">
+        <div class="main">
+            <h1></h1>
+            <h2></h2>
+            <h4></h4>
 
-        <!-- Optimized Image Gallery -->
-        <img src="https://github.com/yungpilsoon/yoon/blob/main/final%20dyptich.png?raw=true" alt="Image 1" loading="lazy">
-        <img src="https://github.com/yungpilsoon/yoon/blob/main/08CC7DC3-97C5-42B8-9220-6145DECEDCF5-33465-00001BDE5425C822_1776.jpeg?raw=true" alt="Image 2" loading="lazy">
-        <img src="https://github.com/yungpilsoon/yoon/blob/main/fujic200_jjuly2021_004_3024.jpeg?raw=true" alt="Image 3" loading="lazy">
-        <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_04.jpeg?raw=true" alt="Image 4" loading="lazy">
-        <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_01.png?raw=true" alt="Image 5" loading="lazy">
+            <!-- Optimized Image Gallery -->
+            <img src="https://github.com/yungpilsoon/yoon/blob/main/final%20dyptich.png?raw=true" alt="Image 1" loading="lazy">
+            <img src="https://github.com/yungpilsoon/yoon/blob/main/08CC7DC3-97C5-42B8-9220-6145DECEDCF5-33465-00001BDE5425C822_1776.jpeg?raw=true" alt="Image 2" loading="lazy">
+            <img src="https://github.com/yungpilsoon/yoon/blob/main/fujic200_jjuly2021_004_3024.jpeg?raw=true" alt="Image 3" loading="lazy">
+            <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_04.jpeg?raw=true" alt="Image 4" loading="lazy">
+            <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_01.png?raw=true" alt="Image 5" loading="lazy">
+        </div>
     </div>
 
 </body>
