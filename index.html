@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: "Times New Roman", serif;
+            font-family: "Times", serif;
             background-color: #000000;
             display: flex;
             flex-direction: column;
@@ -23,9 +23,9 @@
         .sidenav {
             width: 350px;
             position: fixed;
-            top: 45px; /* Adjusted main content */
+            top: 45px;
             left: 3%;
-            {background-color: transparent;}
+            background-color: transparent;
             padding: 5px;
             text-align: left;
         }
@@ -34,13 +34,36 @@
             display: block;
             padding: 10px;
             font-size: 16px;
-            color: #EBEBEB;
+            color: #bababa;
             text-decoration: none;
             transition: color 0.2s ease-in-out;
         }
 
         .sidenav a:hover {
-            color: #979797;
+            color: #bababa;
+        }
+
+        /* Right Bottom Sidebar */
+        .right-sidebar {
+            width: 250px;
+            position: fixed;
+            right: 3%;
+            bottom: 20px;
+            background-color: transparent;
+            padding: 10px;
+            text-align: right;
+        }
+
+        .right-sidebar a {
+            display: block;
+            padding: 6px 0;
+            font-size: 14px;
+            color: #bababa;
+            text-decoration: none;
+        }
+
+        .right-sidebar a:hover {
+            color: #bababa;
         }
 
         /* Main Content - Always Centered */
@@ -49,11 +72,11 @@
             justify-content: center;
             align-items: flex-start;
             width: 100%;
-            margin-top: 100px; /* Ensures spacing below the sidebar */
+            margin-top: 45px;
         }
 
         .main {
-            max-width: 1000px; /* Adjust width of content */
+            max-width: 1000px;
             width: 100%;
             padding: 20px;
             text-align: center;
@@ -75,10 +98,9 @@
                 left: 0;
                 text-align: center;
                 padding: 15px 0;
-                top: 0; /* Moves sidebar to the top on smaller screens */
+                top: 0;
             }
 
-            /*  */
             .main-container {
                 flex-direction: column;
                 margin-top: 300px;
@@ -87,6 +109,16 @@
             .main {
                 width: 100%;
             }
+
+            /* Right sidebar becomes bottom content */
+            .right-sidebar {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                bottom: auto;
+                right: auto;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -94,21 +126,14 @@
 
     <!-- Sidebar Navigation -->
     <div class="sidenav">
-        <p style="color: #">
-        <a href="index.html"><font size="4">sungpil yoon</font</a>
-        <br>
-        <br>
-        <br>
+        <a href="index.html"><font size="5">Sungpil Yoon</font></a>
+        <br><br><br>
         <a href="index.html"><i>Images (ongoing)</i></a>
         <a href="">Projects</a>
-        <a href="about.html"><u>About</u></a>
         <a href="mailto:website@sungpilyoon.com">Contact</a>
-        <br>
-        <br>
-        <br>
-        <a href="https://www.instagram.com/environmentsampler/"><u>@</u></a>
+        <br><br><br>
+     
     </div>
-    </p>
 
     <!-- Main Content - Always Centered -->
     <div class="main-container">
@@ -117,15 +142,19 @@
             <h2></h2>
             <h4></h4>
 
-            <!-- Optimized Image Gallery -->
-            <img src="main/watching-you-watch-me.jpg" alt="watching you watch me" loading="lazy">
             <img src="images/E9670A55-672B-4C2B-9B6F-F6D2E282E0EA-9105-000003F49F0FD81D.jpg?raw=true" alt="Image 2" loading="lazy">
-            <img src="https://github.com/yungpilsoon/yoon/blob/main/final%20dyptich.png?raw=true" alt="Image 3" loading="lazy">
             <img src="https://github.com/yungpilsoon/yoon/blob/main/08CC7DC3-97C5-42B8-9220-6145DECEDCF5-33465-00001BDE5425C822_1776.jpeg?raw=true" alt="Image 4" loading="lazy">
             <img src="https://github.com/yungpilsoon/yoon/blob/main/fujic200_jjuly2021_004_3024.jpeg?raw=true" alt="Image 5" loading="lazy">
             <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_04.jpeg?raw=true" alt="Image 6" loading="lazy">
             <img src="https://github.com/yungpilsoon/yoon/blob/main/sungpilyoon_01.png?raw=true" alt="Image 7" loading="lazy">
         </div>
+    </div>
+
+    <!-- Right Bottom Sidebar -->
+    <div class="right-sidebar">
+        <a href="about.html"><u>About</u></a>
+        <a href="https://www.instagram.com/environmentsampler/">@</a>
+        <a href="#"></a>
     </div>
 
 </body>
