@@ -136,15 +136,62 @@
     </div>
 
     <!-- Main Content - Always Centered -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            padding: 40px;
+        }
+
+        .about {
+            max-width: 480px;     /* keeps text readable */
+            margin-left: auto;    /* pushes block to the right */
+            text-align: right;    /* aligns text inside */
+            padding-right: 40px;  /* spacing from edge */
+        }
+
+        .about h2 {
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .about p {
+            line-height: 1.6;
+        }
+
+        /* Responsive tweak */
+        @media (max-width: 600px) {
+            .about {
+                margin-left: 0;
+                text-align: left;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
     <div class="main-container">
-        <div class="main">
-            <div class="main-container">
-        <div class="main">
+        <div class="about">
             <h2>ABOUT</h2>
-            <br>
-            <paragraph>Sungpil Yoon makes lens-based still images. He graduated from University of British Columbia with a BA in Art History.</paragraph>
+            <p>
+                Sungpil Yoon makes lens-based still images. He graduated from University of British Columbia with a BA in Art History.
+            </p>
         </div>
     </div>
+
+</body>
+</html>
 
     <!-- Right Bottom Sidebar -->
     <div class="right-sidebar">
