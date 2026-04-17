@@ -79,17 +79,20 @@
             object-fit: contain;
         }
 
-        /* Bottom Left Sidebar */
-        .right-sidebar {
-            grid-column: 3;
-            grid-row: 1 / -1;
-            width: 250px;
-            background-color: transparent;
-            padding: 45px 10px 20px 10px;
-            text-align: right;
-            overflow-y: auto;
-            max-height: 100vh;
-        }
+        /* Bottom Right Sidebar */
+.right-sidebar {
+    grid-column: 3;
+    grid-row: 1;              /* or remove this line entirely */
+    width: 250px;
+    background-color: transparent;
+    padding: 20px;
+    text-align: right;
+
+    align-self: end;          /* pushes it to the bottom */
+    justify-self: end;        /* pushes it to the right */
+
+    margin: 20px;             /* creates space from edges */
+}
 
         .right-sidebar a {
             display: block;
