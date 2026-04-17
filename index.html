@@ -1,14 +1,183 @@
-.sidenav {
-    margin-left: 20px; /* Updated to move the navigation menu to the right */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>&#128225; Sungpil Yoon</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
 
-.right-sidebar {
-    position: fixed;
-    bottom: 20px; /* Adjust this value for bottom offset */
-    right: 20px; /* Aligning to the right */
-    transition: all 0.3s ease; /* Adding transition for hover effect */
-}
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
 
-.right-sidebar:hover {
-    opacity: 0.8; /* Example of a hover effect */
-}
+        body {
+            font-family: "Times", serif;
+            background-color: #000000;
+            display: grid;
+            grid-template-columns: 350px 1fr 250px;
+            grid-template-rows: auto 1fr auto;
+            gap: 0;
+        }
+
+        /* Sidebar Navigation - Left */
+        .sidenav {
+            grid-column: 1;
+            grid-row: 1 / -1;
+            width: 350px;
+            background-color: transparent;
+            padding: 45px 5px 20px 5px;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .sidenav a {
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            color: #bababa;
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+        }
+
+        /* Main Content - Center */
+        .main-container {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            padding: 45px 20px 20px 20px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .main {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Image Optimization - Responsive scaling */
+        .main img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 50px;
+            object-fit: contain;
+        }
+
+        /* Bottom Left Sidebar */
+        .right-sidebar {
+            grid-column: 3;
+            grid-row: 1 / -1;
+            width: 250px;
+            background-color: transparent;
+            padding: 45px 10px 20px 10px;
+            text-align: right;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        .right-sidebar a {
+            display: block;
+            padding: 6px 0;
+            font-size: 14px;
+            color: #bababa;
+            text-decoration: none;
+        }
+
+        .right-sidebar a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Design - Tablet/Mobile */
+        @media screen and (max-width: 1200px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+            }
+
+            .sidenav {
+                grid-column: 1;
+                grid-row: 1;
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+                max-height: auto;
+            }
+
+            .main-container {
+                grid-column: 1;
+                grid-row: 3;
+                padding: 20px;
+                max-height: none;
+            }
+
+            .main {
+                width: 100%;
+            }
+
+            .right-sidebar {
+                grid-column: 1;
+                grid-row: 4;
+                width: 100%;
+                text-align: center;
+                padding: 20px 10px;
+                max-height: auto;
+            }
+        }
+
+        /* Responsive Design - Very Small Screens */
+        @media screen and (max-width: 480px) {
+            .main img {
+                margin: 0 auto 30px;
+            }
+
+            .sidenav a, .right-sidebar a {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Sidebar Navigation -->
+    <div class="sidenav">
+        <a href="/index.html"><font size="5">Sungpil Yoon</font></a>
+        <br>
+        <a href="/images.html"><i>Images (ongoing)</i></a>
+        <a href=""></a>
+        <br>
+        <br><br><br>
+    </div>
+
+    <!-- Main Content - Center -->
+    <div class="main-container">
+        <div class="main">
+            <img src="6044_A.jpg" alt="Tourist" />
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="right-sidebar">
+        <a href="mailto:website@sungpilyoon.com">Contact</a>
+        <a href="https://www.instagram.com/environmentsampler/">@</a>
+        <a href="#"></a>
+    </div>
+
+</body>
+</html>
