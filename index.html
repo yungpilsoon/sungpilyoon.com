@@ -1,187 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Title>&#128225; Sungpil Yoon</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&#128225; Sungpil Yoon</title>
 
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            font-family: "Times", serif;
-            background-color: #000000;
-            display: grid;
-            grid-template-columns: 350px 1fr 250px;
-            grid-template-rows: auto 1fr auto;
-            gap: 0;
-        }
-
-        /* Sidebar Navigation - Left */
-        .sidenav {
-            grid-column: 1;
-            grid-row: 5
-            width: 250px;
-            background-color: transparent;
-            padding: 45px 5px 20px 5px;
-            text-align: left;
-            overflow-y: auto;
-            max-height: 50vh;
-            margin: 20px;
-        }
-
-        .sidenav a {
-            display: block;
-            padding: 10px;
-            font-size: 16px;
-            color: #bababa;
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
-
-        .sidenav a:hover {
-            color: #ffffff;
-        }
-
-        /* Main Content - Center */
-        .main-container {
-            grid-column: 2;
-            grid-row: 1;
-            display: center;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            padding: 45px 20px 20px 20px;
-            overflow-y: auto;
-            max-height: 200vh;
-        }
-
-        .main {
-            max-width: 800px;
-            width: 100%;
-            text-align: left;
-        }
-
-        /* Image Optimization - Responsive scaling */
-        .main img {
-            max-width: 100%;
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 50px;
-            object-fit: contain;
-        }
-
-        /* Bottom Right Sidebar */
-.right-sidebar {
-    grid-column: 3;
-    grid-row: 5;              /* or remove this line entirely */
-    width: 350px;
-    background-color: transparent;
-    padding: 20px;
-    text-align: right;
-
-    align-self: end;          /* pushes it to the bottom */
-    justify-self: end;        /* pushes it to the right */
-
-    margin: 20px;             /* creates space from edges */
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-        .right-sidebar a {
-            display: block;
-            padding: 6px 0;
-            font-size: 14px;
-            color: #bababa;
-            text-decoration: none;
-        }
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
-        .right-sidebar a:hover {
-            color: #ffffff;
-        }
+body {
+    font-family: "Times", serif;
+    background-color: #000;
+    position: relative;
+}
 
-        /* Responsive Design - Tablet/Mobile */
-        @media screen and (max-width: 1200px) {
-            body {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto auto 1fr auto;
-            }
+/* LEFT SIDEBAR (Top Left) */
+.sidenav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 250px;
+    padding: 20px 10px;
+    text-align: left;
+}
 
-            .sidenav {
-                grid-column: 1;
-                grid-row: 1;
-                width: 100%;
-                padding: 15px;
-                text-align: center;
-                max-height: bottom;
-            }
+.sidenav a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #bababa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-            .main-container {
-                grid-column: 1;
-                grid-row: 4;
-                padding: 20px;
-                max-height: none;
-            }
+.sidenav a:hover {
+    color: #fff;
+}
 
-            .main {
-                width: 100%;
-            }
+/* RIGHT SIDEBAR (Bottom Right) */
+.right-sidebar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    padding: 20px 10px;
+    text-align: right;
+}
 
-            .right-sidebar {
-                grid-column: 1;
-                grid-row: 5;
-                width: 100%;
-                text-align: center;
-                padding: 20px 10px;
-                max-height: auto;
-            }
-        }
+.right-sidebar a {
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #bababa;
+    text-decoration: none;
+}
 
-        /* Responsive Design - Very Small Screens */
-        @media screen and (max-width: 800px) {
-            .main img {
-                margin: 0 auto 30px;
-            }
+.right-sidebar a:hover {
+    color: #fff;
+}
 
-            .sidenav a, .right-sidebar a {
-                font-size: 14px;
-                padding: 8px;
-            }
-        }
-    </style>
+/* MAIN CENTER CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.main {
+    max-width: 950px;
+    width: 100%;
+}
+
+/* IMAGE SCALING */
+.main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .sidenav, .right-sidebar {
+        width: 200px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .sidenav {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .right-sidebar {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Left Sidebar Navigation -->
-    <div class="sidenav">
-        <a href="/index.html"><font size="4">Sungpil Yoon</font></a>
-        <br>
-        <a href="/images.html"><i>Images (ongoing)</i></a>
-        <a href=""></a>
-        <br>
-        <br><br><br>
-    </div>
+<!-- LEFT SIDEBAR -->
+<div class="sidenav">
+    <a href="/index.html"><font size="4">Sungpil Yoon</font></a>
+    <a href="/images.html"><i>Images (ongoing)</i></a>
+</div>
 
-    <!-- Main Content - Center -->
-    <div class="main-container">
-        <div class="main">
-            <img src="6044_A.jpg" alt="Tourist" />
-        </div>
+<!-- MAIN CONTENT -->
+<div class="main-container">
+    <div class="main">
+        <img src="6044_A.jpg" alt="Tourist">
     </div>
+</div>
 
-    <!-- Right Sidebar -->
-    <div class="right-sidebar">
-        <a href="mailto:website@sungpilyoon.com">Contact</a>
-        <a href="https://www.instagram.com/environmentsampler/">@</a>
-        <a href="#"></a>
-    </div>
+<!-- RIGHT SIDEBAR -->
+<div class="right-sidebar">
+    <a href="mailto:website@sungpilyoon.com">Contact</a>
+    <a href="https://www.instagram.com/environmentsampler/">☎</a>
+</div>
 
 </body>
 </html>
