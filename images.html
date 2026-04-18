@@ -137,11 +137,60 @@ body {
 </div>
 
 <!-- MAIN CONTENT -->
-<div class="main-container">
-    <div class="main">
-        <img src="6044_A.jpg" alt="Tourist">
-    </div>
-</div>
+<script>
+const images = [
+    "08CC7DC3-97C5-42B8-9220-6145DECEDCF5-33465-00001BDE5425C822_1776.jpeg",
+    "image2.jpg",
+    "image3.jpg",
+    "image4.jpg"
+];
+
+let currentIndex = -1;
+let preloadQueue = [...images]; // copy array
+
+// shuffle preload order (so it's not predictable)
+preloadQueue.sort(() => Math.random() - 0.5);
+
+// progressively preload images
+function preloadNext() {
+    if (preloadQueue.length === 0) return;
+
+    const src = preloadQueue.shift();
+    const img = new Image();
+    img.src = src;
+
+    img.onload = () => {
+        // wait a bit before loading next (prevents network burst)
+        setTimeout(preloadNext, 300);
+    };
+}
+
+// change image with fade
+function changeImage() {
+    let newIndex;
+
+    do {
+        newIndex = Math.floor(Math.random() * images.length);
+    } while (newIndex === currentIndex);
+
+    currentIndex = newIndex;
+
+    const mainImg = document.getElementById("main-image");
+
+    mainImg.style.opacity = 0;
+
+    setTimeout(() => {
+        mainImg.src = images[newIndex];
+        mainImg.style.opacity = 1;
+    }, 150);
+}
+
+// initial load
+window.onload = () => {
+    changeImage();   // show image immediately
+    preloadNext();   // start background loading
+};
+</script>
 
 <!-- RIGHT SIDEBAR -->
 <div class="right-sidebar">
