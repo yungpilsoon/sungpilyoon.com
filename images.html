@@ -1,155 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <Title>&#128225; Sungpil Yoon</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0px;
-            padding: 0px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>&#128225; Sungpil Yoon</title>
 
-        body {
-            font-family: "Times", serif;
-            background-color: #000000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Sidebar Navigation - Above Main Content */
-        .sidenav {
-            width: 250px;
-            position: fixed;
-            top: 45px;
-            left: 2%;
-            background-color: transparent;
-            padding: 5px;
-            text-align: left;
-        }
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
-        .sidenav a {
-            display: block;
-            padding: 10px;
-            font-size: 16px;
-            color: #bababa;
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
+body {
+    font-family: "Times", serif;
+    background-color: #000;
+    position: relative;
+}
 
-        .sidenav a:hover {
-            color: #bababa;
-        }
+/* LEFT SIDEBAR (Top Left) */
+.sidenav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 250px;
+    padding: 20px 10px;
+    text-align: left;
+}
 
-        /* Right Bottom Sidebar */
-        .right-sidebar {
-            width: 250px;
-            position: fixed;
-            right: 3%;
-            bottom: 30px;
-            background-color: transparent;
-            padding: 10px;
-            text-align: right;
-        }
+.sidenav a {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    color: #bababa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-        .right-sidebar a {
-            display: block;
-            padding: 6px 0;
-            font-size: 14px;
-            color: #bababa;
-            text-decoration: none;
-        }
+.sidenav a:hover {
+    color: #fff;
+}
 
-        .right-sidebar a:hover {
-            color: #bababa;
-        }
+/* RIGHT SIDEBAR (Bottom Right) */
+.right-sidebar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    padding: 20px 10px;
+    text-align: right;
+}
 
-        /* Main Content - Always Centered */
-        .main-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            width: 75%;
-            margin-top: 45px;
-        }
+.right-sidebar a {
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #bababa;
+    text-decoration: none;
+}
 
-        .main {
-            max-width: 1000px;
-            width: 100%;
-            padding: 20px;
-            text-align: left;
-        }
+.right-sidebar a:hover {
+    color: #fff;
+}
 
-        /* Image Optimization */
-        .main img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto 50px;
-        }
+/* MAIN CENTER CONTAINER */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
 
-        /* Responsive Design */
-        @media screen and (max-width: 800px) {
-            .sidenav {
-                position: relative;
-                width: 100%;
-                left: 0;
-                text-align: center;
-                padding: 15px 0;
-                top: 0;
-            }
+.main {
+    max-width: 950px;
+    width: 100%;
+}
 
-            .main-container {
-                flex-direction: column;
-                margin-top: 300px;
-            }
+/* IMAGE SCALING */
+.main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
-            .main {
-                width: 100%;
-            }
+/* TABLET */
+@media (max-width: 1024px) {
+    .sidenav, .right-sidebar {
+        width: 200px;
+    }
+}
 
-            /* Right sidebar becomes bottom content */
-            .right-sidebar {
-                position: relative;
-                width: 100%;
-                text-align: center;
-                bottom: auto;
-                right: auto;
-                margin-top: 10px;
-            }
-        }
-    </style>
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .sidenav {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .right-sidebar {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Sidebar Navigation -->
-    <div class="sidenav">
-        <a href="/images.html"><font size="4">Sungpil Yoon</font></a>
-        <br>
-        <a href="/images.html"><i>Images (ongoing)</i></a>
-        <a href=""></a>
-        <br>
-        <br><br><br>
-     
-    </div>
+<!-- LEFT SIDEBAR -->
+<div class="sidenav">
+    <a href="/index.html"><font size="4">Sungpil Yoon</font></a>
+    <a href="/images.html"><i>Images (ongoing)</i></a>
+</div>
 
-    <!-- Main Content - Always Centered -->
-    <div class="main-container">
-        <div class="main">
-            <img src="DSCF9164.jpg" alt="Generic advertising" />
-            <img src="0008690_0008690-R1-E002.jpg" alt="Labour Day" />
-        </div>
+<!-- MAIN CONTENT -->
+<div class="main-container">
+    <div class="main">
+        <img src="_DSF1258-3.jpg" alt="Hermitage">
+        <img src="watching-you-watch-me.jpg" alt="Watching you watch me">
+        <img src="sungpilyoon_01.png" alt="Clump">
     </div>
+</div>
 
-    <!-- Right Bottom Sidebar -->
-    <div class="right-sidebar">
-        <a href="mailto:website@sungpilyoon.com">Contact</a>
-        <a href="https://www.instagram.com/environmentsampler/">@</a>
-        <a href="#"></a>
-    </div>
+<!-- RIGHT SIDEBAR -->
+<div class="right-sidebar">
+    <a href="mailto:website@sungpilyoon.com">Contact</a>
+    <a href="https://www.instagram.com/environmentsampler/">☎</a>
+</div>
 
 </body>
 </html>
-
